@@ -1,0 +1,12 @@
+<h1>Movie Releases - Add Post</h1>
+
+<%# url: mreleases_path => see mreleases controller 'create' method%>
+<%= form_for :mrelease, url: mreleases_path do | f| %>
+<%# do error message here%>
+  <p>
+	<%= f.label :title %> <%= f.text_field(:title,{:class => 'form-control'}) %><br>
+	<%= f.label :release %> <%= f.text_field(:release,{:class => 'form-control'}) %><br>
+
+	<%= f.submit({:class => 'btn btn-primary'}) %><br>
+  </p>
+<% end %>

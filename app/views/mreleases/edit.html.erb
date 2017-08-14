@@ -1,0 +1,13 @@
+<%# same info as new.html.erb %>
+
+<h1>Movie Releases - Edit Post</h1>
+
+<%# url: SINGULAR mrelease_path %>
+<%= form_for(@post) do |f| %>
+  <p>
+	<%= f.label :title %> <%= f.text_field(:title,{:class => 'form-control'}) %><br>
+	<%= f.label :release %> <%= f.text_field(:release,{:class => 'form-control'}) %><br>
+
+	<%= f.submit({:class => 'btn btn-primary'}) %><br>
+  </p>
+<% end %>
