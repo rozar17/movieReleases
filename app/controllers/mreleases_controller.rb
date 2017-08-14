@@ -68,7 +68,13 @@ class MreleasesController < ApplicationController
 	end
 
 
+	def destroy
+		@post = Mrelease.find(params[:id])
+		@post.destroy
 
+		redirect_to mreleases_path
+		#now go to show.html.erb to add the delete link
+	end
 	
 
 	#to resolve error "ActiveModel::ForbiddenAttributesError in MreleasesController#create"
